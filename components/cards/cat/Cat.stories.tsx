@@ -10,8 +10,8 @@ export default {
 
 const Template: ComponentStory<typeof Cat> = (args) => <Cat {...args} />;
 
-export const Base = Template.bind({});
+export const Card = Template.bind({});
 
-Base.args = {
+Card.args = {
   ...mockCatProps.base,
 } as ICatProps;
