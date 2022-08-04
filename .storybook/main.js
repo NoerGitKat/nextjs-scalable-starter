@@ -5,6 +5,17 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    {
+      name: "storybook-addon-sass-postcss",
+      options: {
+        postcssLoaderOptions: {
+          implementation: require("postcss"),
+        },
+        sassLoaderOptions: {
+          implementation: require("sass"),
+        },
+      },
+    },
   ],
   framework: "@storybook/react",
   core: {
