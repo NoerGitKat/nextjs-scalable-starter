@@ -7,7 +7,9 @@ import { NextPageWithLayout } from "./page";
 const Home: NextPageWithLayout = () => {
   return (
     <section className={styles.main}>
-      <h1 className={styles.title}>Welcome to the Next.js starter!</h1>
+      <h1 className={styles.title}>
+        Welcome to the <a href="https://nextjs.org/">Next.js</a> starter!
+      </h1>
       <Cat
         tag="Feline"
         title="hello"

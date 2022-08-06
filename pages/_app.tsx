@@ -1,7 +1,13 @@
-import type { AppProps } from "next/app";
+import { AppProps } from "next/app";
+import { NextPageWithLayout } from "./page";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+interface IAppPropsWithLayout extends AppProps {
+  Component: NextPageWithLayout;
+}
+
+function MyApp({ Component, pageProps }: IAppPropsWithLayout) {
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;
