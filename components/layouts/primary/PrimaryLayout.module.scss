@@ -1,5 +1,5 @@
 .main {
   display: flex;
+  flex-wrap: wrap;
   height: calc(100vh - 64px);
-  background-color: blue;
 }

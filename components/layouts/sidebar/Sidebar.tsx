@@ -1,14 +1,14 @@
 import Link from "next/link";
-import styles from "./SidebarLayout.module.scss";
+import styles from "./Sidebar.module.scss";
 
-export interface ISidebarLayout extends React.ComponentPropsWithoutRef<"div"> {}
+export interface ISidebar extends React.ComponentPropsWithoutRef<"div"> {}
 
-const SidebarLayout: React.FC<ISidebarLayout> = () => {
+const Sidebar: React.FC<ISidebar> = () => {
   const menuItems = ["Home", "About"];
 
   return (
     <nav className={styles.nav}>
-      <input type="search" className="" placeholder="Search..." />
+      <input type="search" className={styles.input} placeholder="Search..." />
       {menuItems.map((item) => (
         <Link key={item} href={`/${item !== "Home" ? item.toLowerCase() : ""}`}>
           <a>{item}</a>
@@ -18,4 +18,4 @@ const SidebarLayout: React.FC<ISidebarLayout> = () => {
   );
 };
 
-export default SidebarLayout;
+export default Sidebar;

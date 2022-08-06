@@ -8,18 +8,14 @@ export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<"div"> {
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({
   children,
   justify = "items-center",
-  ...divProps
 }) => {
   return (
     <>
       <Head>
         <title>App Template</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main {...divProps} className={styles.main}>
-        {/* <Header /> */}
-        <section>{children}</section>
-        {/* <Footer /> */}
-      </main>
+      <main className={styles.main}>{children}</main>
     </>
   );
 };

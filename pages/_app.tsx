@@ -1,4 +1,5 @@
 import { AppProps } from "next/app";
+import "../styles/Global.scss";
 import { NextPageWithLayout } from "./page";
 
 interface IAppPropsWithLayout extends AppProps {

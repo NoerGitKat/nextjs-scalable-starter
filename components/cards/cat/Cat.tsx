@@ -26,7 +26,7 @@ const Cat: React.FC<ICatProps> = ({
             src={image}
             alt="card__image"
             className={styles.card__image}
-            width="300"
+            width="400"
             height="300"
           />
         </header>
